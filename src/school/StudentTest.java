@@ -1,6 +1,17 @@
 package school;
 
+import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class StudentTest {
     public static void main(String[] args) {
@@ -40,6 +51,32 @@ public class StudentTest {
 
         rg.registerStudent(m1);
 
+        Scanner kb = new Scanner(System.in);
+        VocationalAbstractStudent v2 = new VocationalAbstractStudent(12346,"zeynep",2021,new Date(),"Pyh");
+        VocationalAbstractStudent v3 = new VocationalAbstractStudent(121346,"ali",2021,new Date(),"Pyh");
+        VocationalAbstractStudent v4 = new VocationalAbstractStudent(123246,"abdullah",2021,new Date(),"Pyh");
+
+        TreeSet<Student> student = new TreeSet<Student>(new StudentNameComparator());
+
+
+        student.add(m1);
+        student.add(v1);
+        student.add(v2);
+        student.add(v3);
+        student.add(v4);
+
+
+        System.out.println("*********");
+
+        Iterator<Student> iterator = student.iterator();
+
+        while (iterator.hasNext())
+        {
+            System.out.println(iterator.next().getName());
+        }
+
 
     }
+
 }
+

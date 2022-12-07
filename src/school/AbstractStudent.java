@@ -68,4 +68,5 @@ public abstract class AbstractStudent implements Student {
         this.major = major;
     }
 
+
 }
