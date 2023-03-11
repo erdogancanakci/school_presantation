@@ -12,7 +12,7 @@ public class StudentTest {
         VocationalAbstractStudent v1 = new VocationalAbstractStudent(12346,"veli",2021,new Date(),"Pyh");
         System.out.println(v1.toString());
 
-        v1.register();
+        System.out.println(v1.getName() + " is register? " +v1.isRegister());
 
         RegistrationOffice rg = new RegistrationOffice();
         System.out.println(rg.getAStudent(v1).getName());

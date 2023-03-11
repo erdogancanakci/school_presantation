@@ -4,11 +4,19 @@ public class RegistrationOffice {
     public RegistrationOffice() {
     }
 
-    public void registerStudent (Student student) {
-        student.register();
+    public void registerStudent (AbstractStudent student) {
+        if(student.isRegister()) {
+            System.out.println(student.getName()+" already registired");
+        }
+        else {
+            student.register = true;
+            System.out.println(student.getName()+" is registired.");
+        }
     }
 
-    public Student getAStudent(Student student) {
+
+
+    public Student getAStudent(AbstractStudent student) {
         if (student instanceof VocationalAbstractStudent) {
             VocationalAbstractStudent v1 = (VocationalAbstractStudent) student;
             return v1;

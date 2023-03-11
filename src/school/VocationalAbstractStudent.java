@@ -15,15 +15,6 @@ public class VocationalAbstractStudent extends AbstractStudent {
         System.out.println("Vocational student is working");
     }
 
-    @Override
-    public void register() {
-        if (!register) {
-            register = true;
-            System.out.println("Vocational Student is registered");
-        }
-        else
-            System.out.println("Vocational student have already registered");
-    }
 
     @Override
     public String toString() {

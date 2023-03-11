@@ -67,6 +67,4 @@ public abstract class AbstractStudent implements Student {
     public void setMajor(String major) {
         this.major = major;
     }
-
-
 }
